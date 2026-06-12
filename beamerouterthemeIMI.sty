@@ -1,0 +1,30 @@
+\ProvidesPackage{beamerouterthemeIMI}
+  [2011/01/10 v1.0 beamer 'IMI' outertheme]
+
+\defbeamertemplate*{headline}{IMI_outer}
+{
+  \pgfdeclareimage[height=1.0cm]{university-logo}{IMI_eng_invers1200dpi}
+
+  \begin{pgfpicture}{0cm}{0cm}{14cm}{1.0cm}
+    \color{IMIgreen}
+    \pgfrect[fill]{\pgfpoint{3cm}{0cm}}{\pgfpoint{14cm}{1.0cm}}
+
+    \pgfputat{\pgfpoint{0cm}{0.0001cm}}{
+      \pgfbox[left,bottom]{\raisebox{0pt}[1.0cm][0pt]{\pgfuseimage{university-logo}}}
+    }
+
+    \color{white}
+    \pgfputat{\pgfpoint{\paperwidth-0.5cm}{0.5cm}}{
+      \pgfbox[right,center]{\insertshorttitle}
+    }
+  \end{pgfpicture}
+}
+
+\defbeamertemplate*{footline}{IMI_outer}
+{
+}
+
+\defbeamertemplate*{sidebar right}{IMI_outer}
+{
+}
+

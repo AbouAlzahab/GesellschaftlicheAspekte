@@ -1,0 +1,28 @@
+name: Build PDF
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build_pdf:
+    runs-on: ubuntu-latest
+
+    container:
+      image: texlive/texlive:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build PDF
+        run: |
+          latexmk -lualatex -interaction=nonstopmode -halt-on-error seminar-folien.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: seminar-folien-pdf
+          path: seminar-folien.pdf
+          retention-days: 7
