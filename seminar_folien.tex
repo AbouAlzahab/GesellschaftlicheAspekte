@@ -14,6 +14,18 @@
 \usepackage{times}
 \usepackage[T1]{fontenc}
 \usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage[
+    backend=biber,
+    style=authoryear,
+    doi=false,
+    isbn=false,
+    url=false,
+    eprint=false
+]{biblatex}
+
+\addbibresource{seminar_folien.bib}
 
 %%%
 % TITLE INFORMATION
@@ -48,12 +60,112 @@
   \titlepage
 \end{frame}
 
-\section{Einführung}
-\section{Motivation}
-
 \begin{frame}{Inhaltsverzeichnis}
   \small
   \tableofcontents
+\end{frame}
+
+\section{Ist vollständige Erklärbarkeit überhaupt möglich?}
+
+\begin{frame}{Eingangsfrage}
+  \begin{center}
+      \includegraphics[width=0.5\textwidth]{images/image_01}
+  \end{center}
+ Ein Radiologe und ein KI-Modell erkennen
+denselben Hirntumor.
+\newline
+Warum erwarten wir beim KI-Modell eine
+vollständige Erklärung, beim Arzt aber nicht? \parencite{kemptRelativeExplainabilityDouble2022}
+ \vfill
+%   \hfill
+  {\tiny Bild-Quelle: \fullcite{liLargeKernelAttention3D2023}}
+\end{frame}
+
+\begin{frame}{Transparenzproblem moderner KI}
+ Neuronale Netze können als stark komprimierte Repräsentationen von Wissen betrachtet werden.
+ \vspace{0.3cm}
+ \begin{center}
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    box/.style={
+        draw,
+        rounded corners,
+        align=center,
+        minimum width=2.5cm,
+        minimum height=0.8cm
+    },
+    arrow/.style={
+        ->,
+        thick
+    }
+]
+
+\node[box] (data) {Trainingsdaten};
+\node[box, right=of data] (training) {Training};
+\node[box, right=of training] (params) {komprimiertes Wissen};
+\node[box, right=of params] (decision) {Entscheidung};
+
+\draw[arrow] (data) -- (training);
+\draw[arrow] (training) -- (params);
+\draw[arrow] (params) -- (decision);
+
+\end{tikzpicture}
+\end{center}
+\vspace{0.3cm}
+ Der Ursprung einzelner Entscheidungen ist
+nicht mehr direkt nachvollziehbar.
+
+ \vfill
+%   \hfill
+  {\tiny Technische Grundlage: \fullcite{wangUnderstandingDeepRepresentation2025}}
+\end{frame}
+
+\begin{frame}{Grenzen der Erklärbarkeit}
+ Selbst moderne Explainable-AI-Verfahren
+liefern häufig nur Hinweise.
+\vspace{0.2cm}
+\begin{itemize}
+ \item Saliency Maps zeigen relevante Bildbereiche
+ \item Unsicherheiten können visualisiert werden
+ \item Der eigentliche Entscheidungsprozess bleibt
+  jedoch oft verborgen
+\end{itemize}
+\vspace{0.2cm}
+\rightarrow \vspace{0.1cm} Erklären wir die Ursache einer Entscheidung
+  oder lediglich ihre nachträgliche Begründung? \parencite{rudinStopExplainingBlack2019}
+\end{frame}
+
+\begin{frame}{Gilt das nicht auch für Menschen?}
+Menschen treffen viele Entscheidungen intuitiv.
+\vspace{0.2cm}
+\begin{itemize}
+\item Gesichter erkennen
+\item Sprache verwenden
+\item Medizinische Diagnosen stellen
+\end{itemize}
+\vspace{0.2cm}
+Das Ergebnis kann begründet werden,
+der tatsächliche neuronale Prozess aber nicht. \parencite{nisbettTellingMoreWe1977}
+\newline
+\vspace{0.5cm}
+\begin{center}
+\textbf{Müssten wir nach derselben Logik nicht auch das menschliche Gehirn vollständig erklären können?}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Fazit}
+Vollständige Erklärbarkeit komplexer KI-Systeme
+erscheint derzeit kaum erreichbar.\newline\newline
+Entscheidend könnte daher weniger die vollständige
+Nachvollziehbarkeit jedes Entscheidungsschritts
+sein, sondern die Frage:\newline\newline
+Ist das System zuverlässig genug und kommuniziert
+es seine Unsicherheiten ausreichend, um
+verantwortungsvolle Entscheidungen zu unterstützen?
+ \vfill
+%   \hfill
+  {\tiny Quelle: \fullcite{kemptRelativeExplainabilityDouble2022}}
 \end{frame}
 
 \end{document}
