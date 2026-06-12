@@ -18,11 +18,11 @@ jobs:
 
       - name: Build PDF
         run: |
-          latexmk -lualatex -interaction=nonstopmode -halt-on-error seminar-folien.tex
+          latexmk -lualatex -interaction=nonstopmode -halt-on-error seminar_folien.tex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: seminar-folien-pdf
-          path: seminar-folien.pdf
+          path: seminar_folien.pdf
           retention-days: 7
