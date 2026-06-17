@@ -42,8 +42,7 @@
   Mohammad Waheed Abdulbaki Shurbaji
   \\
   Sami Abou Alzahab
-  \\
-  Dunia Zabara
+\\
 }
 
 \date{\today}
@@ -173,59 +172,110 @@ verantwortungsvolle Entscheidungen zu unterstützen?
 \end{frame}
 
 \section{Fairness und Bias in der künstlichen Intelligenz}
-\begin{frame}{Motivation}
-    \textbf{Warum Fairness wichtig ist}
-    \begin{itemize}
-        \item Integration in das tägliche Leben: Gesundheitswesen, Bildung, Finanzen, Personalwesen
-    \end{itemize}
 
-    \vspace{0.3cm}
-    \textbf{Wie und wann Bias entsteht}
-    \begin{itemize}
-        \item Datenbasierte Entscheidungen: Historische Ungleichheit, menschliche Vorurteile und Fehl-/Unterrepräsentation von Gruppen und Ideologien
-    \end{itemize}
 
-    \vspace{0.3cm}
-    \textbf{Transparenz und Erklärbarkeit}
-    \begin{itemize}
-        \item Steigerung des Benutzervertrauens durch Transparenz
-        \item ,,Blackbox-KI'' schafft Unsicherheit
-    \end{itemize}
-
-    \vspace{0.3cm}
-    \textbf{Menschliche Aufsicht und Rechenschaftspflicht}
-    \begin{itemize}
-        \item Unvorhersehbarkeit in realen Situationen.
-    \end{itemize}
-
-    \vfill
-
+% ==============================================================================
+% FOLIE 3: BIAS TYPEN
+% ==============================================================================
+\begin{frame}[shrink]{Bias Typen}
+    \small
+    \renewcommand{\arraystretch}{1.5}
+    \begin{center}
+        \begin{tabular}{|p{0.24\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+            \hline
+            \textbf{Bias-Typ} & \textbf{Beschreibung} & \textbf{Beispiele} \\
+            \hline
+            \textbf{Confirmation Bias} & Tritt auf, wenn ein KI-System verwendet wird, um bereits bestehende Vorurteile oder Überzeugungen seiner Entwickler oder Nutzer zu bestätigen. & Ein KI-System, das den Erfolg von Bewerbern auf der Grundlage von Vorurteilen des Personalmanagers vorhersagt. \\
+            \hline
+            \textbf{Measurement Bias} & Entsteht, wenn die Datenerfassung oder -messung bestimmte Gruppen systematisch über- oder unterrepräsentiert. & Eine Umfrage, die mehr Antworten von Stadtbewohnern sammelt, was zu einer Unterrepräsentation ländlicher Meinungen führt. \\
+            \hline
+            \textbf{Interaction Bias} & Tritt auf, wenn ein KI-System auf voreingenommene Weise mit Menschen interagiert, was zu einer unfairen Behandlung führt. & Ein Chatbot, der auf Männer und Frauen unterschiedlich reagiert, was zu einer verzerrten Kommunikation führt. \\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    \vspace{0.2cm}
+    \tiny \textit{Quelle: Fairness and Bias in Artificial Intelligence: A Brief Survey of Sources, Impacts, and Mitigation Strategies (Emilio Ferrara)}
 \end{frame}
 
-\begin{frame}{Die Lücke zwischen technischer Fairness und menschlichem Vertrauen}
-    \textbf{Statistische vs.\ kontextuelle Moral}
-    \begin{itemize}
-        \item KI kann laut Algorithmus statistisch ,,fair'' sein, wirkt aber in bestimmten Kontexten auf Einzelpersonen dennoch voreingenommen.
-    \end{itemize}
 
-    \vspace{0.4cm}
-    \textbf{Das Warum hinter dem Wie}
+% ==============================================================================
+% FOLIE 5: ZUVERLÄSSIG TROTZ KLARER VERZERRUNG?
+% ==============================================================================
+\begin{frame}{Zuverlässig trotz klarer Verzerrung?}
     \begin{itemize}
-        \item Hohe Genauigkeit allein garantiert keine Vertrauenswürdigkeit.
+        \item Inwiefern wird eine ärztliche Entscheidung von einer KI beeinflusst?
+        \item Hohe Genauigkeit allein garantiert keine Vertrauenswürdigkeit: (vgl. Studie zur \textit{Mobile App for diagnosis and management of pigmented skin cancer})
+        \begin{itemize}
+            \item Ein blindes Vertrauen in die KI-Entscheidungen hätte zu unnötigen Biopsien und Operationen geführt.
+            \item Reine Diagnosemetriken sind nicht ausreichend; die klinische Erfahrung und Urteilskraft bleiben unverzichtbar.
+        \end{itemize}
     \end{itemize}
-
-    \vspace{0.4cm}
-    \textbf{Modellierung vs.\ Datenarbeit}
-    \begin{itemize}
-        \item Modellfokussierte und datenfokussierte Ansätze
-    \end{itemize}
+    
+    \vspace*{\fill}
+    \tiny \textit{Quelle: Menzies S, Sinz C, Menzies M et al. \textbf{Comparison of humans versus mobile phone-powered artificial intelligence for the diagnosis and management of pigmented skin cancer in secondary care: a multicentre, prospective, diagnostic, clinical trial} The Lancet Digital Health, 5, e679-e691}
 \end{frame}
 
+% ==============================================================================
+% FOLIE 6: INDIVIDUELLE UND GESELLSCHAFTLICHE AUSWIRKUNGEN
+% ==============================================================================
+\begin{frame}[shrink]{Individuelle und Gesellschaftliche Auswirkungen}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Individuelle Ebene}
+            \begin{itemize}
+                \item \textbf{Wandel des Arbeitsalltags:} KI als Assistenz ("Augmentation"), Wegfall von Routinen. \\
+                \tiny \textit{(Quelle: BCG, 2023 – "AI Will Reshape More Jobs Than It Replaces")} \small
+                \item \textbf{Hyper-Personalisierung:} Maßgeschneiderte Behandlungen (Medizin) und Lernwege (Bildung). \\
+                \tiny \textit{(Quelle: The European Wergeland Centre, 2023)} \small
+                \item \textbf{Autonomieverlust \& " Skill-Fading ":} Soziale Entfremdung und das Verlernen eigener Fähigkeiten. \\
+                \tiny \textit{(Quelle: Chu et al., 2020 – PMC7605294)} \small
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.48\textwidth}
+            \textbf{Gesellschaftliche Ebene}
+            \begin{itemize}
+                \item \textbf{Wirtschaftliche Ungleichheit:} Massive Gewinnkonzentration bei wenigen Tech-Akteuren. \\
+                \tiny \textit{(Quelle: Fraunhofer IAO, 2021)} \small
+                \item \textbf{Skalierung von Bias:} Automatisierte, massenhafte Reproduktion historischer Diskriminierung. \\
+                \tiny \textit{(Quelle: Chu et al., 2020)} \small
+                \item \textbf{Systemische Vulnerabilität:} Kontrollverlust und unvorhersehbare Kettenreaktionen durch "Black-Box"-Systeme. \\
+                \tiny \textit{(Quelle: Chu et al., 2020)} \small
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+% ==============================================================================
+% FOLIE 7: GRENZEN DER TRANSPARENZ & VERANTWORTUNG
+% ==============================================================================
+\begin{frame}{Grenzen der Transparenz}
+    \begin{itemize}
+        \item \textbf{Transparenz $\neq$ Verantwortlichkeit:} Einblick in Daten und Algorithmen garantiert in der klinischen Anwendung keine automatische Haftung oder Verantwortung.
+        \item \textbf{Ethisch-epistemische Hürden:} Selbst vollständig offengelegte Systeme werfen weiterhin grundlegende ethische Fragen bezüglich fehlerhafter Entscheidungen auf.
+        \item \textbf{Regulatorische Realität:} Gesetzliche Vorgaben wie die DSGVO fordern primär allgemeine Systemtransparenz, bieten jedoch kein klares rechtliches „Recht auf Erklärung“ im Schadensfall.
+    \end{itemize}
+    
+    \vspace*{\fill}
+    \tiny \textit{Quellen: de Laat (2018); Herzog (2019, 2021); Wachter et al. (2017) -- Vgl. Stellungnahme der ZEKO BÄK (2021)}
+\end{frame}
+
+% ==============================================================================
+% FOLIE 8: DAS PATIENTEN-DILEMMA
+% ==============================================================================
+\begin{frame}{Das Patienten-Dilemma}
+    \begin{itemize}
+        \item Würden Sie eine Klinik wählen, die sofortige Termine ohne Wartezeit bietet, aber zu 100\,\% von KI in Diagnostik und Therapie gesteuert wird?
+        \item \textbf{Oder} bevorzugen Sie eine traditionelle Praxis mit langen Wartezeiten und 0\,\% KI-Unterstützung?
+    \end{itemize}
+\end{frame}
 
 
 \section{KI als neuer Akteur im Sprechzimmer }
 
-\begin{frame}{Eingangsfrage}
+\begin{frame}{}
 
     \vspace{0.8cm}
     \begin{center}
@@ -235,16 +285,7 @@ verantwortungsvolle Entscheidungen zu unterstützen?
     \end{center}
 \end{frame}
 
-\section{Ausblick und Diskussion}
-\begin{frame}{Die alles entscheidende Frage}
 
-    \vspace{0.6cm}
-    \begin{center}
-        \textbf{\Large Soll die KI die endgültige Entscheidung treffen?} \\
-        \vspace{0.4cm}
-        \textbf{\Large Und wer trägt am Ende dafür die Verantwortung?}
-    \end{center}
-\end{frame}
 
 
 \begin{frame}{Ist KI wirklich nur das nächste Ultraschallgerät?}
@@ -275,6 +316,30 @@ verantwortungsvolle Entscheidungen zu unterstützen?
     {\tiny Quelle: \fullcite{datenschutzticker2025}}
 \end{frame}
 
+\begin{frame}{Die Koloskopie-Studie}
+    \textbf{Studiendesign}
+    \begin{itemize}
+        \item 19 erfahrene Endoskopiker aus 4 Zentren.
+        \item 1.443 Koloskopien analysiert (an Tagen \textit{ohne} KI, nach einer Eingewöhnungsphase an das System).
+    \end{itemize}
+
+    \vspace{0.4cm}
+    \textbf{Kernergebnisse }
+    \begin{itemize}
+        \item \textbf{Signifikanter Abfall:} Ohne KI sank die ärztliche Erkennungsrate um 6 Prozent (von \textbf{28,4\,\%} auf \textbf{22,4\,\%}).
+        \item \textbf{Der Maskierungseffekt:} Mit eingeschalteter KI stieg die ADR auf \textbf{25,3\,\%} -- der eigene Kompetenzverlust fiel im Alltag dadurch gar nicht auf.
+    \end{itemize}
+
+    \vspace{0.4cm}
+    \textbf{Die Ursache}
+    \begin{itemize}
+        \item Die visuelle Mustererkennung der Ärzte stumpft durch die Technik-Abhängigkeit ab (,,Google-Maps-Effekt'').
+    \end{itemize}
+
+    \vfill
+    {\tiny Quelle: \fullcite{datenschutzticker2025}}
+\end{frame}
+
 \begin{frame}{Von der Dyade zur multiplen Struktur}
     \textit{,,Lange Zeit war die medizinische Entscheidungsfindung eine Dyade. [...] Mit der Integration von KI in die Entscheidungsfindung stellt sich die Frage, ob diese Zweierbeziehung weiterhin bestehen bleibt oder ob sich der Prozess zu einer multiplen Entscheidungsstruktur weiterentwickelt.''} \parencite{roche2025}
     
@@ -288,12 +353,6 @@ verantwortungsvolle Entscheidungen zu unterstützen?
     {\tiny Quelle: \fullcite{roche2025}}
 \end{frame}
 
-\begin{frame}{Moderation statt Allwissenheit}
-    \textit{,,Die gemeinsame Entscheidungsfindung wird durch KI nicht abgeschafft, sondern gewinnt an Komplexität. Ärzt:innen sind mehr denn je gefragt, als Vermittler:innen zwischen Leitlinien, Technologie und individuellen Patientenbedürfnissen zu agieren.''} \parencite{roche2025}
-
-    \vfill
-    {\tiny Quelle: \fullcite{roche2025}}
-\end{frame}
 
 \begin{frame}{Fazit: Augmentation statt Automatisierung}
     \textit{,,Die Zukunft der medizinischen Entscheidungsfindung liegt nicht in der Frage, ob KI Entscheidungen trifft, sondern darin, wie wir Ärzt:innen, Patient:innen und KI gemeinsam zu besseren Entscheidungen kommen.''} \parencite{roche2025}
@@ -309,8 +368,16 @@ verantwortungsvolle Entscheidungen zu unterstützen?
 
 
 
+\section{Ausblick und Diskussion}
+\begin{frame}{Die alles entscheidende Frage}
 
-
+    \vspace{0.6cm}
+    \begin{center}
+        \textbf{\Large Soll die KI die endgültige Entscheidung treffen?} \\
+        \vspace{0.4cm}
+        \textbf{\Large Und wer trägt am Ende dafür die Verantwortung?}
+    \end{center}
+\end{frame}
 
 
 
